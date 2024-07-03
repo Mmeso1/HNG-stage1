@@ -89,7 +89,7 @@ header div:first-child {
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
 }
 
 .accordion {
@@ -108,29 +108,34 @@ header div:first-child {
   padding: 1.4rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 2rem;
 }
 
 .accordion-item-header:hover {
   background-color: var(--accordion-header-hover-color);
+  transition: background-color 0.3s ease;
 }
 
 .accordion-item-header span {
   font-size: 1.5rem;
 }
 
-.accordion-item-body {
+.accordion .accordion-item-body {
   padding: 1.4rem;
   height: 7rem;
-  margin-top: 5px;
+  margin-top: -1rem;
   margin-bottom: 40px;
   font-family: var(--junge-font-family);
   background-color: var(--accordion-body-color);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  display: none;
+  transition: height 2s ease;
 }
 
-.accordion-item-body:hover {
-  background-color: var(--accordion-body-hover-color);
+.accordion .accordion-item:first-child .accordion-item-body {
+  display: block;
 }
 
 .right-hero-container .right-hero-container-bg {
