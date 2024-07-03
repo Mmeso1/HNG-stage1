@@ -8,10 +8,10 @@
   --email-font-size: 1.5rem 24px;
   --body-font-size: 1rem 16px;
 
-  --small-title-font-size: 1.5rem 24px;
-  --small-hero-font-size: 2rem 32px;
-  --small-email-font-size: 1.25rem 20px;
-  --small-body-font-size: 0.875rem 14px;
+  --small-title-font-size: 2rem;
+  --small-hero-font-size: 2rem;
+  --small-email-font-size: 0.8rem;
+  --small-body-font-size: 0.875rem;
 
   --font-weight: 400;
   --font-style: normal;
@@ -68,8 +68,8 @@ header div:first-child {
 }
 
 .slack-profile-picture {
-  width: 75px;
-  height: 70px;
+  max-width: 80px;
+  height: auto;
   border-radius: 50%;
   margin-left: 1rem;
 }
@@ -93,8 +93,8 @@ header div:first-child {
 }
 
 .accordion {
-  margin: 2rem;
-  margin-left: 4rem;
+  margin: auto;
+  padding: 0 4rem;
   color: var(--primary-color);
 }
 .accordion,
@@ -123,7 +123,7 @@ header div:first-child {
 
 .accordion .accordion-item-body {
   padding: 1.4rem;
-  height: 7rem;
+  height: auto;
   margin-top: -1rem;
   margin-bottom: 40px;
   font-family: var(--junge-font-family);
@@ -148,6 +148,10 @@ header div:first-child {
   height: auto;
 }
 
+.hero-img2 {
+  display: none;
+}
+
 .right-hero-container .hero-image {
   position: relative;
 }
@@ -155,6 +159,7 @@ header div:first-child {
 .right-hero-container .hero-image-text {
   position: absolute;
   padding-left: 8rem;
+  padding-right: 8rem;
   font-size: var(--hero-font-size);
   font-family: var(--jua-font-family);
   color: var(--body-color);
@@ -190,4 +195,65 @@ footer {
 .links a img {
   width: auto;
   height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .slack-display-name {
+    font-size: var(--small-title-font-size);
+  }
+
+  .slack-email {
+    font-size: var(--small-email-font-size);
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .right-hero-container {
+    order: 0;
+  }
+
+  .accordion {
+    order: 1;
+    padding: 0 2rem;
+  }
+
+  .right-hero-container .hero-image-text {
+    font-size: var(--small-hero-font-size);
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .hero-img1 {
+    display: none;
+  }
+
+  .hero-img2 {
+    display: block;
+  }
+
+  .hero-icon {
+    display: none;
+  }
+
+  .accordion-item-header {
+    padding: 0.7rem;
+  }
+
+  .accordion .accordion-item-body {
+    font-size: var(--small-body-font-size);
+  }
+
+  .time {
+    font-size: var(--small-body-font-size);
+  }
+
+  footer {
+    margin: 0.8rem;
+  }
+
+  .links a img {
+    height: 25px;
+  }
 }
