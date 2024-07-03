@@ -199,7 +199,7 @@ footer {
   flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
   .slack-display-name {
     font-size: var(--small-title-font-size);
   }
