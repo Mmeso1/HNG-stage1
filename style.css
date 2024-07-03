@@ -189,6 +189,7 @@ footer {
 .links a {
   text-decoration: none;
   width: 20px;
+  height: auto;
   padding: 0 1rem;
 }
 
