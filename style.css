@@ -170,6 +170,7 @@ header div:first-child {
 .footer-container {
   height: auto;
   margin-top: auto;
+  width: 100%;
   background-color: var(--footer-bg-color);
 }
 
@@ -188,14 +189,14 @@ footer {
 
 .links a {
   text-decoration: none;
-  width: 20px;
-  height: auto;
   padding: 0 1rem;
 }
 
 .links a img {
-  width: auto;
-  height: 30px;
+  min-height: 30px;
+  max-height: 30px;
+  object-fit: contain;
+  flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
 @media screen and (max-width: 768px) {
