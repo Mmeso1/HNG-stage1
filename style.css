@@ -1,0 +1,188 @@
+:root {
+  --julius-font-family: "Julius Sans One", sans-serif;
+  --jua-font-family: "Jua", sans-serif;
+  --junge-font-family: "Junge", cursive;
+
+  --title-font-size: 2.5rem;
+  --hero-font-size: 3.5rem;
+  --email-font-size: 1.5rem 24px;
+  --body-font-size: 1rem 16px;
+
+  --small-title-font-size: 1.5rem 24px;
+  --small-hero-font-size: 2rem 32px;
+  --small-email-font-size: 1.25rem 20px;
+  --small-body-font-size: 0.875rem 14px;
+
+  --font-weight: 400;
+  --font-style: normal;
+
+  --primary-color: #03161d;
+  --secondary-color: #000000;
+  --body-color: #ffffff;
+  --accordion-header-color: rgba(30, 30, 30, 0.05);
+  --accordion-body-color: rgba(0, 0, 0, 0.25);
+  --footer-bg-color: #03161d;
+
+  --accordion-header-hover-color: rgba(30, 30, 30, 0.1);
+  --accordion-body-hover-color: rgba(0, 0, 0, 0.5);
+  --email-hover-color: rgba(0, 0, 0, 0.5);
+  --footer-hover-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--body-color);
+}
+
+/* HEADER */
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+  color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slack-display-name {
+  font-family: var(--julius-font-family);
+  font-size: var(--title-font-size);
+  font-weight: var(--font-weight);
+}
+
+.slack-profile-picture {
+  width: 75px;
+  height: 70px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.slack-email {
+  font-family: var(--jua-font-family);
+  font-size: var(--email-font-size);
+  font-weight: var(--font-weight);
+  margin-top: -1rem;
+}
+
+.slack-email:hover {
+  color: var(--email-hover-color);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.accordion {
+  margin: 2rem;
+  margin-left: 4rem;
+  color: var(--primary-color);
+}
+.accordion,
+.right-hero-container {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.accordion-item-header {
+  background-color: var(--accordion-header-color);
+  padding: 1.4rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.accordion-item-header:hover {
+  background-color: var(--accordion-header-hover-color);
+}
+
+.accordion-item-header span {
+  font-size: 1.5rem;
+}
+
+.accordion-item-body {
+  padding: 1.4rem;
+  height: 7rem;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  font-family: var(--junge-font-family);
+  background-color: var(--accordion-body-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.accordion-item-body:hover {
+  background-color: var(--accordion-body-hover-color);
+}
+
+.right-hero-container .right-hero-container-bg {
+  display: flex;
+  align-items: center;
+}
+
+.right-hero-container img {
+  width: 100%;
+  height: auto;
+}
+
+.right-hero-container .hero-image {
+  position: relative;
+}
+
+.right-hero-container .hero-image-text {
+  position: absolute;
+  padding-left: 8rem;
+  font-size: var(--hero-font-size);
+  font-family: var(--jua-font-family);
+  color: var(--body-color);
+  -webkit-text-stroke: 1px var(--secondary-color);
+}
+
+/* FOOTER */
+.footer-container {
+  height: auto;
+  margin-top: auto;
+  background-color: var(--footer-bg-color);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: var(--junge-font-family);
+}
+
+.links a {
+  text-decoration: none;
+  width: 20px;
+  padding: 0 1rem;
+}
+
+.links a img {
+  width: auto;
+  height: 30px;
+}
